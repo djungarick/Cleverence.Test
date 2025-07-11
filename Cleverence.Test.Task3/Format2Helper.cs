@@ -11,13 +11,13 @@ public static partial class Format2Helper
     private const string Caller = "caller";
     private const string Message = "message";
 
-    private static readonly Regex _regex = MyRegex();
+    private static readonly Regex _format2Regex = GetFormat2Regex();
 
     public static bool TryMatch(string input, [NotNullWhen(true)] out InputInfo? inputInfo)
     {
         inputInfo = null;
 
-        Match match = _regex.Match(input);
+        Match match = _format2Regex.Match(input);
 
         if (!match.Success)
             return false;
@@ -40,7 +40,7 @@ public static partial class Format2Helper
         + $$"""(?<{{Caller}}>.+?)\s*?\|\s*?"""
         + $$"""(?<{{Message}}>.+)$""",
         RegexOptions.Compiled)]
-    private static partial Regex MyRegex();
+    private static partial Regex GetFormat2Regex();
 
     public record struct InputInfo(DateOnly Date, string Time, string Level, string Caller, string Message);
 }
