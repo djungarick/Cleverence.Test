@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Cleverence.Test.Task1": {
+      "commandName": "Project",
+      "commandLineArgs": "-c aaabbcccdde"
+    }
+  }
+}

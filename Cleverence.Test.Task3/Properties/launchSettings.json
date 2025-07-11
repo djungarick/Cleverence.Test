@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Cleverrence.Test.Task3": {
+      "commandName": "Project",
+      "commandLineArgs": "Logs/input.txt Logs/output.txt"
+    }
+  }
+}
