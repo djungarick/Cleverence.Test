@@ -33,11 +33,11 @@ public static partial class Format2Helper
         return true;
     }
 
-    [GeneratedRegex($$"""^(?<{{Date}}>\d{4}-\d{2}-\d{2})\s*?"""
-        + $$"""(?<{{Time}}>\d{2}:\d{2}:\d{2}\.\d{4})\s*?\|\s*?"""
-        + $$"""(?<{{Level}}>[A-Za-z]+)\s*?\|\s*?"""
-        + $$"""(?<unknownDigitsToIgnore>\d+\s*?\|\s*?)?"""
-        + $$"""(?<{{Caller}}>.+?)\s*?\|\s*?"""
+    [GeneratedRegex($$"""^(?<{{Date}}>\d{4}-\d{2}-\d{2})\s*"""
+        + $$"""(?<{{Time}}>\d{2}:\d{2}:\d{2}\.\d{4})\s*\|\s*"""
+        + $$"""(?<{{Level}}>[A-Za-z]+)\s*\|\s*"""
+        + $$"""(?<unknownDigitsToIgnore>\d+\s*\|\s*)?"""
+        + $$"""(?<{{Caller}}>.+?)\s*\|\s*"""
         + $$"""(?<{{Message}}>.+)$""",
         RegexOptions.Compiled)]
     private static partial Regex GetFormat2Regex();
